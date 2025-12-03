@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --branco: #fff;
+    --preto: #000;
+    --icons: #bf8c36;
+    --texto: #6c4b3b;
+    --caixa: #c8a66e;
+
+}
+
+body{
+    background-color: var(--branco);
+}
+
+/* HEADER */
+
+header{
+    width: 100%;
+}
+
+header>div.container-flex{
+    
+}
