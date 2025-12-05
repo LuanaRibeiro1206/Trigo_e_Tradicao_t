@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -14,15 +14,55 @@
 }
 
 body{
-    background-color: var(--branco);
+    background-color: var(--fundo-site);
 }
+
 
 /* HEADER */
 
 header{
     width: 100%;
+    background-color: #000;
 }
 
 header>div.container-flex{
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 165px;
+    background-color: #000;
+}
+
+.container-flex {
+    width: 85%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#logo{
+    width: 155px;
+}
+
+.links{
+    /* para centralizar o menu */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.links a{
+    font-size: 25px;
+    color: var(--branco);
+    text-decoration: none;
+}
+.links a:hover{
+    color: var(--icons);
+    border-bottom: 1px solid var(--icons);
+}
+
+
+#icone-barras,
+#icone-x,
+#menu_botao{
+    display: none;
 }
