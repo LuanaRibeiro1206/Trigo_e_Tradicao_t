@@ -1,68 +1,99 @@
+
+:root {
+    --color-dark-brown: #6c4b3b;      /* Marrom Escuro (Ícones e Fundo do Formulário) */
+    --color-medium-brown: #a3887b;    /* Marrom Médio (Textos) */
+    --color-light-brown: #d8c2b5;     /* Marrom Claro (Fundo das caixas de info) */
+    --color-accent: #e0b48e;          /* Destaque/Botões */
+    --color-background-light: #fcfcfc; /* Fundo Geral */
+    --font-family-inria: 'Inria Serif', serif; 
+}
+
+
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-:root{
-    --branco: #fff;
-    --preto: #000;
-    --icons: #bf8c36;
-    --texto: #6c4b3b;
-    --caixa: #c8a66e;
-
+body {
+    font-family: var(--font-family-inria);
+    background-color: var(--color-background-light);
+    color: #444;
 }
 
-body{
-    background-color: var(--fundo-site);
+/* ------------------------------------------- */
+/* 1. SEÇÃO BANNER/HEADER (Topo da Página) */
+/* ------------------------------------------- */
+.banner {
+    /* Substitua 'hero-image.jpg' pela sua imagem de fundo real (a cozinheira) */
+    background-image: url('img/banner1\ 1.svg'); 
+    background-size: cover;
+    background-position: center top;
+    height: 600px; /* Altura da imagem de topo */
+    position: relative;
 }
 
-
-/* HEADER */
-
-header{
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: #000;
-}
-
-header>div.container-flex{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 165px;
-    background-color: #000;
+    padding: 20px 5%;
 }
 
 .container-flex {
-    width: 85%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-#logo{
-    width: 155px;
-}
-
-.links{
-    /* para centralizar o menu */
+    /* Alinha Logo, Menu e Botão horizontalmente */
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
 }
 
-.links a{
-    font-size: 25px;
-    color: var(--branco);
+#logo {
+    width: 150px; 
+}
+
+/* Menu de Links (Desktop) */
+#menu.links a {
     text-decoration: none;
-}
-.links a:hover{
-    color: var(--icons);
-    border-bottom: 1px solid var(--icons);
+    color: white; 
+    margin-left: 25px;
+    font-size: 1.1em;
+    transition: color 0.3s ease; 
 }
 
+#menu.links a:hover {
+    color: var(--color-accent);
+}
 
-#icone-barras,
-#icone-x,
-#menu_botao{
-    display: none;
+/* Botão de Hambúrguer e Ícones SVG */
+#menu_botao {
+    display: none; /* Oculto em desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#menu_botao svg {
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+
+#icone-x {
+    display: none; /* Oculto por padrão, será mostrado pelo JS */
+}
+
+/* ------------------------------------------- */
+/* 2. MENU DE ÍCONES (Alinhamento Horizontal e Vertical) */
+/* ------------------------------------------- */
+.menu-icones-section {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.icon-container-flex {
+    /* Contêiner principal para alinhamento horizontal dos 3 blocos */
+    display: flex;
+    justify-content: space
 }
