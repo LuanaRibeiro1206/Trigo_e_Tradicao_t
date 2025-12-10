@@ -1,99 +1,359 @@
-
-:root {
-    --color-dark-brown: #6c4b3b;      /* Marrom Escuro (Ícones e Fundo do Formulário) */
-    --color-medium-brown: #a3887b;    /* Marrom Médio (Textos) */
-    --color-light-brown: #d8c2b5;     /* Marrom Claro (Fundo das caixas de info) */
-    --color-accent: #e0b48e;          /* Destaque/Botões */
-    --color-background-light: #fcfcfc; /* Fundo Geral */
-    --font-family-inria: 'Inria Serif', serif; 
-}
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* ======= GERAL ======= */
 body {
-    font-family: var(--font-family-inria);
-    background-color: var(--color-background-light);
-    color: #444;
+    margin: 0;
+    font-family: "InriaSerif", light;
+    background-color: #ffffff;
+    color: #6b4a3b;
 }
 
-/* ------------------------------------------- */
-/* 1. SEÇÃO BANNER/HEADER (Topo da Página) */
-/* ------------------------------------------- */
-.banner {
-    /* Substitua 'hero-image.jpg' pela sua imagem de fundo real (a cozinheira) */
-    background-image: url('img/banner1\ 1.svg'); 
-    background-size: cover;
-    background-position: center top;
-    height: 600px; /* Altura da imagem de topo */
-    position: relative;
-}
-
-header {
+/* ======= TOPO ======= */
+.header {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 5%;
-}
+    top: 20px;
+    left: 50px;
+    width: calc(100% - 100px);
 
-.container-flex {
-    /* Alinha Logo, Menu e Botão horizontalmente */
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    z-index: 10;
 }
 
-#logo {
-    width: 150px; 
+.logo img {
+    width: 160px;
 }
 
-/* Menu de Links (Desktop) */
-#menu.links a {
+/* ======= MENU ======= */
+.menu {
+    display: flex;
+    gap: 32px;
+}
+
+.menu a {
+    color: white;
+    font-size: 18px;
     text-decoration: none;
-    color: white; 
-    margin-left: 25px;
-    font-size: 1.1em;
-    transition: color 0.3s ease; 
+    transition: 0.2s ease;
 }
 
-#menu.links a:hover {
-    color: var(--color-accent);
+.menu a:hover {
+    color: #BF8C36;
 }
 
-/* Botão de Hambúrguer e Ícones SVG */
-#menu_botao {
-    display: none; /* Oculto em desktop */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
+/* ======= BANNER PRINCIPAL ======= */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-#menu_botao svg {
-    width: 30px;
-    height: 30px;
-    fill: white;
-}
+/* ======= ÍCONES ======= */
+.icons-section {
+    background: white;
+    padding: 80px 0;
 
-#icone-x {
-    display: none; /* Oculto por padrão, será mostrado pelo JS */
-}
-
-/* ------------------------------------------- */
-/* 2. MENU DE ÍCONES (Alinhamento Horizontal e Vertical) */
-/* ------------------------------------------- */
-.menu-icones-section {
-    padding: 40px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 160px;
     text-align: center;
 }
 
-.icon-container-flex {
-    /* Contêiner principal para alinhamento horizontal dos 3 blocos */
+.icon-box {
+    text-decoration: none;
+    color: #6b4a3b;
+}
+
+.icon-box img {
+    width: 90px;
+    height: auto;
+    color: #6b4a3b;
+}
+
+.icon-box p {
+    margin-top: 15px;
+    font-size: 26px;
+}
+
+/* ======= SOBRE NÓS ======= */
+.sobre-nos {
+    width: 100%;
+    padding: 130px 0;
     display: flex;
-    justify-content: space
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.sobre-texto {
+    width: 440px;
+    text-align: left;
+}
+
+.sobre-texto h2 {
+    font-size: 36px;
+    color: #6b4a3b;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sobre-texto p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.sobre-img img {
+    width: 340px;
+    height: 440px;
+    border-radius: 35px;
+    object-fit: cover;
+
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ======= NOSSOS PRODUTOS ======= */
+.produtos {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.produtos h2 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 50px;
+}
+
+.produtos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.produtos-grid img {
+    width: 260px;
+    height: 330px;
+    border-radius: 35px;
+    object-fit: cover;
+    display: block;
+
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+/* ====== NOSSOS CURSOS ====== */
+.cursos {
+    margin-top: 140px;
+    text-align: center;
+}
+
+.cursos h2 {
+    font-size: 36px;
+    color: #6b4a3b;
+    margin-bottom: 60px;
+}
+
+.cursos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.cursos-texto {
+    width: 360px;
+    text-align: left;
+}
+
+.cursos-texto p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #6b4a3b;
+}
+
+/* Imagem + botão */
+.cursos-img-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cursos-img-box img {
+    width: 330px;
+    height: 240px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+
+.btn-cursos {
+    padding: 10px 30px;
+    background-color: #BF8C36;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.btn-cursos:hover {
+    background-color: #a9782f;
+}
+
+
+/* ====== ÁREA DO CLIENTE ====== */
+.area-cliente {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.area-cliente h2 {
+    font-size: 36px;
+    color: #6b4a3b;
+    margin-bottom: 60px;
+}
+
+/* Card */
+.cliente-card {
+    width: 680px;
+    background-color: #6b4a3b;
+    margin: 0 auto;
+    padding: 50px 60px;
+    border-radius: 35px;
+    position: relative;
+
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.18);
+}
+
+/* Logo dentro do card */
+.cliente-logo {
+    position: absolute;
+    top: 5px;   /* valor anterior: 25px */
+    right: 25px;
+    width: 110px;
+}
+
+/* Form */
+.cliente-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.cliente-form label {
+    color: white;
+    font-size: 18px;
+}
+
+.cliente-form input,
+.cliente-form textarea {
+    width: 100%;
+    background: #d3ad68;
+    border: none;
+    border-radius: 15px;
+    padding: 12px 16px;
+    font-size: 16px;
+    outline: none;
+}
+
+.cliente-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* Botão do formulário */
+.cliente-form button {
+    align-self: flex-end;
+    background: #d3ad68;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cliente-form button:hover {
+    background-color: #c09a56;
+}
+
+/* ====== HORÁRIO CARD ====== */
+.horario {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.horario-card {
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #C9A568;
+    border-radius: 25px;
+    padding: 40px 55px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Texto */
+.horario-texto h3 {
+    font-size: 30px;
+    color: #6b4a3b;
+    margin-bottom: 20px;
+}
+
+.horario-texto p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+/* Imagem */
+.horario-img-box {
+    text-align: center;
+}
+
+.horario-img-box img {
+    width: 300px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.20);
+}
+
+/* Legenda da imagem */
+.legenda {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: white;
+}
+
+/* ====== RODAPÉ ====== */
+.rodape {
+    background-color: #6b4a3b;
+    margin-top: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+
+    padding: 40px 0;
+}
+
+.rodape-item {
+    text-align: center;
+}
+
+.rodape-item img {
+    width: 55px;
+    margin-bottom: 10px;
+}
+
+.rodape-item p {
+    color: white;
+    font-size: 16px;
 }

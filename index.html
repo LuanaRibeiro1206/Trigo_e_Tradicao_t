@@ -1,42 +1,184 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trigo & Tradição</title>
-
-
-    <link rel="shortcut icon" href="img/logo branca.svg" type="image/x-icon">
-
     <link rel="stylesheet" href="style.css">
-
-
-    <script src="script.js"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <title>Trigo & Tradição</title>
 </head>
-
 <body>
-    <section class="banner">
-        <header>
-            <div class="container-flex">
-                <img id="logo" src="img/logo branca.svg" alt="Logo Trigo & Tradição">
 
-                <nav id="menu" class="links">
-                    <a href="#Menu">Menu</a>
-                    <a href="#Sobre nós">Sobre Nós</a>
-                    <a href="#Nossos Produtos">Nossos Produtos</a>
-                </nav>
+<!-- ====== TOPO ====== -->
+<header class="header">
+    <div class="logo">
+        <img src="img/logo branca.svg" alt="Trigo e Tradição">
+    </div>
 
-                <button id="menu_botao" type="button">
-                    <svg id="icone-barras" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                        <path
-                            d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
-                    </svg>
+    <nav class="menu">
+        <a href="#menu">Menu</a>
+        <a href="#sobre">Sobre nós</a>
+        <a href="#produtos">Nossos produtos</a>
+    </nav>
+</header>
 
-                    <svg id="icone-x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                        <path d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.
-   
-   
+<!-- ====== IMAGEM PRINCIPAL ====== -->
+<section class="hero">
+    <img src="img/banner1 1.svg" alt="Foto principal">
+
+</section>
+
+
+<!-- ====== ÍCONES ====== -->
+<section class="icons-section">
+
+    <a href="#caneca" class="icon-box">
+        <img src="img/caneca icon 1.svg" alt="Produtos">
+        <p>Nossos Produtos</p>
+    </a>
+
+    <a href="#livro" class="icon-box">
+        <img src="img/livro icon 1.svg" alt="Cursos">
+        <p>Nossos Cursos</p>
+    </a>
+
+    <a href="telefone" class="icon-box">
+        <img src="img/telefone icon 1.svg" alt="Cliente">
+        <p>Área do Cliente</p>
+    </a>
+
+</section>
+
+<!-- ====== SOBRE NÓS ====== -->
+<section class="sobre-nos">
+
+    <div class="sobre-texto">
+        <h2>Sobre nós</h2>
+
+        <p>
+            Uma padaria de fermentação natural que preza pela tradição e o sabor verdadeiro do pão artesanal. 
+            Fundada por um casal, Juca e a Maria que largou a vida corporativa para abrir um negócio e uma escola 
+            de panificação, ela é conhecida na vizinhança pelo cheiro de pão fresco que sai pela manhã.
+        </p>
+    </div>
+
+    <div class="sobre-img">
+        <img src="img/foto pão doce  1.svg" alt="Foto Sobre Nós">
+    </div>
+
+</section>
+
+
+
+<!-- ====== NOSSOS PRODUTOS ====== -->
+<section class="produtos">
+
+    <h2>Nossos<br>Produtos</h2>
+
+    <div class="produtos-grid">
+        <img src="img/Component 8.svg" alt="Produto 1">
+        <img src="img/9.png" alt="Produto 2">
+        <img src="img/10.png" alt="Produto 3">
+    </div>
+
+</section>
+
+<!-- ====== NOSSOS CURSOS ====== -->
+<section class="cursos" id="cursos">
+    <h2>Nossos Cursos</h2>
+
+    <div class="cursos-container">
+
+        <div class="cursos-texto">
+            <p>
+                Aprenda técnicas essenciais e avançadas de panificação com aulas práticas ministradas por 
+                profissionais experientes. Nossos cursos ensinam desde os pães tradicionais até receitas 
+                artesanais, oferecendo conhecimento, prática e confiança para quem deseja empreender 
+                ou se aperfeiçoar na área.
+            </p>
+        </div>
+
+        <div class="cursos-img-box">
+            <img src="img/cursos 1.svg" alt="Curso de panificação">
+
+            <a href="#" class="btn-cursos">Venha conferir</a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ====== ÁREA DO CLIENTE ====== -->
+<section class="area-cliente" id="cliente">
+
+    <h2>Área do Cliente</h2>
+
+    <div class="cliente-card">
+
+        <img src="img/logo branca.svg" class="cliente-logo" alt="Trigo & Tradição">
+
+        <form class="cliente-form">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Seu e-mail...">
+
+            <label for="duvida">Descreva sua dúvida</label>
+            <textarea id="duvida" placeholder="Comentário..."></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+</section>
+
+<!-- ====== HORÁRIO DE FUNCIONAMENTO ====== -->
+<section class="horario">
+
+    <div class="horario-card">
+
+        <div class="horario-texto">
+            <h3>Horário de<br>Funcionamento</h3>
+
+            <p>
+                Segunda-feira: 06h às 22h<br>
+                Terça-feira: 06h às 22h<br>
+                Quarta-feira: 06h às 22h<br>
+                Quinta-feira: 06h às 22h<br>
+                Sexta-feira: 06h às 22h<br>
+                Sábado: 06h às 22h<br>
+                Domingo: 06h às 14h
+            </p>
+        </div>
+
+        <div class="horario-img-box">
+            <img src="img/Gemini_Generated_Image_rm0wovrm0wovrm0w 1.svg" alt="Foto da loja">
+            <span class="legenda">R. Niterói, 180 · Centro, São Caetano do Sul · SP</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ====== RODAPÉ ====== -->
+<footer class="rodape">
+
+    <div class="rodape-item">
+        <img src="img/envelope icon 1.svg" alt="Email">
+        <p>trigotradicao@gmail.com</p>
+    </div>
+
+    <div class="rodape-item">
+        <img src="img/instagram icon 1.svg" alt="Instagram">
+        <p>@trigotradicao</p>
+    </div>
+
+    <div class="rodape-item">
+        <img src="img/telefone icon 2.svg" alt="Telefone">
+        <p>+00 000000-0000</p>
+    </div>
+
+</footer>
+
+
+</body>
+</html>
